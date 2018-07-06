@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category> 
+<pattern>*天气*</pattern>
+<template>url:http://wap.baidu.com/s?word=<star/>天气
+</template> 
+</category>
+
+
+</aiml>
