@@ -591,8 +591,25 @@
     </category>
     <category>
         <pattern>你在哪</pattern>
-        <template>我在上海，你在哪座城市？</template>
+        <template>我在北京，你也在北京吗？</template>
     </category>
+
+    <category>
+        <pattern>*不*</pattern>
+        <that>我在北京，你也在北京吗？</that>
+        <template>
+            好遗憾哦！
+        </template>
+    </category>
+
+    <category>
+        <pattern>*在*</pattern>
+        <that>我在北京，你在哪座城市？</that>
+        <template>
+            好巧哦！
+        </template>
+    </category>
+
     <category>
         <pattern>你*在哪*</pattern>
         <template>

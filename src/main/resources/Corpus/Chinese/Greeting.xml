@@ -5,9 +5,16 @@
         <pattern>你好</pattern>
         <template>
             <random>
-                <li>好好好~</li>
-                <li>Hi~</li>
-                <li>Hello~</li>
+                <li>您好，很高兴为您服务，请问有什么可以帮助您？</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>您好</pattern>
+        <template>
+            <random>
+                <li>您好，很高兴为您服务，请问有什么可以帮助您？</li>
             </random>
         </template>
     </category>
@@ -132,7 +139,7 @@
         </template>
     </category>
     <category>
-        <pattern>*晚 安*</pattern>
+        <pattern>*晚安*</pattern>
         <template>
             <srai>晚安</srai>
         </template>
@@ -150,13 +157,13 @@
             <random>
                 <li>晚安</li>
                 <li>Sleep tight~</li>
-                <li>晚安，祝你梦到妹纸~</li>
+                <li>晚安，祝你做个好梦~</li>
             </random>
         </template>
     </category>
 
     <category>
-        <pattern>*你是谁*</pattern>
+        <pattern>你是谁</pattern>
         <template>
             <random>
                 <li>皇上！您不记得我了吗！我就是当初大明湖畔的<bot name="bname"/>啊！
@@ -169,6 +176,39 @@
             </random>
         </template>
     </category>
+
+    <category>
+        <pattern>*你*小名*</pattern>
+        <template>
+            <srai>你是谁</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>*你是谁*</pattern>
+        <template>
+            <srai>你是谁</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>*你*大名*</pattern>
+        <template>
+            <srai>你是谁</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>*你*名字*</pattern>
+        <template>
+            <srai>你是谁</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>*你*叫什么*</pattern>
+        <template>
+            <srai>你是谁</srai>
+        </template>
+    </category>
+
 
 
     <!-- 这里丁丁的匹配又问题，看看其他地方有没有丁丁的匹配 -->
@@ -311,9 +351,18 @@
         </template>
     </category>
     <category>
-        <pattern>你有什么爱好</pattern>
+        <pattern>你*爱好*</pattern>
         <template>我喜欢聊天、看书听音乐</template>
     </category>
+    <category>
+        <pattern>你*喜爱*</pattern>
+        <template>我喜欢聊天、看书听音乐</template>
+    </category>
+    <category>
+        <pattern>你*喜好*</pattern>
+        <template>我喜欢聊天、看书听音乐</template>
+    </category>
+
 
     <category>
         <pattern>*你喜欢*吗*</pattern>

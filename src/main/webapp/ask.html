@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>客服机器人</title>
+    <title>客服小A</title>
     <script src='js/jquery-1.8.3.min.js'></script>
+    <script>
+        $(function(){
+            document.onkeydown = function(e){
+                var ev = document.all ? window.event : e;
+                if(ev.keyCode==13) {
+                    takeMsg();
+                }
+            }
+        });
+    </script>
     <style type="text/css">
         .talk_con{
             width:600px;
-            height:500px;
+            height:530px;
             border:1px solid #666;
             margin:50px auto 0;
             background:#f9f9f9;
+            border-radius:10px 10px 10px 10px;
         }
         .talk_show{
             width:580px;
@@ -48,7 +59,7 @@
             margin-left:10px;
         }
         .atalk{
-           margin:10px; 
+           margin:10px auto;
         }
         .atalk span{
             display:inline-block;
@@ -56,9 +67,10 @@
             border-radius:10px;
             color:#fff;
             padding:5px 10px;
+            margin:1px auto;
         }
         .btalk{
-            margin:10px;
+            margin:10px auto;
             text-align:right;
         }
         .btalk span{
@@ -67,6 +79,7 @@
             border-radius:10px;
             color:#fff;
             padding:5px 10px;
+            margin:1px auto;
         }
         iframe html body
         {
@@ -82,36 +95,42 @@
             var TalkSub = document.getElementById("talksub");
 
             TalkSub.onclick = function(){
-                count_msg=count_msg+1;
-                //定义空字符串
-                var str = "";
-                if(TalkWords.value == ""){
-                     // 消息为空时弹窗
-                    alert("消息不能为空");
-                    return;
-                }
+                takeMsg();
+            }
 
-                //提问
-                str = '<div id="msgtext_'+count_msg+'" class="btalk"><span>我 :' + TalkWords.value +'</span></div>' ;
+        }
+
+        function takeMsg(){
+            Words = document.getElementById("words");
+            TalkWords = document.getElementById("talkwords");
+            TalkSub = document.getElementById("talksub");
+
+            count_msg=count_msg+1;
+            //定义空字符串
+            var str = "";
+            if(TalkWords.value == ""){
+                // 消息为空时弹窗
+                alert("消息不能为空");
+                return;
+            }
+
+            //提问
+            str = '<div id="msgtext_'+count_msg+'" class="btalk"><img style="width: 45px;" src="img/user.png"></img><span>' + TalkWords.value +'</span></div>' ;
+            Words.innerHTML = Words.innerHTML + str;
+            document.getElementById("msgtext_"+count_msg).scrollIntoView();
+            count_msg=count_msg+1;
+
+            $.get("/ask",{askWord:TalkWords.value},function(data){
+                //ajax应答
+                if(data.indexOf("url:")!=-1){
+                    str = '<div id="msgtext_'+count_msg+'" class="atalk"><img style="width: 45px;" src="img/kf.png"></img><span><iframe style="height: 550px;width: 380px;"  scrolling="no" src="'+data.substring(4)+'"></iframe></span></div>';
+                }else{
+                    str = '<div id="msgtext_'+count_msg+'" class="atalk"><img style="width: 45px;" src="img/kf.png"></img><span>' + data +'</span></div>';
+                }
                 Words.innerHTML = Words.innerHTML + str;
                 document.getElementById("msgtext_"+count_msg).scrollIntoView();
                 count_msg=count_msg+1;
-
-                $.get("/ask",{askWord:TalkWords.value},function(data){
-                    //ajax应答
-                    if(data.indexOf("url:")!=-1){
-                        str = '<div id="msgtext_'+count_msg+'" class="atalk"><iframe style="height: 550px;width: 380px;"  scrolling="no" src="'+data.substring(4)+'"></iframe></div>';
-                    }else{
-                        str = '<div id="msgtext_'+count_msg+'" class="atalk"><span>小A :' + data +'</span></div>';
-                    }
-                    Words.innerHTML = Words.innerHTML + str;
-                    document.getElementById("msgtext_"+count_msg).scrollIntoView();
-                    count_msg=count_msg+1;
-                });
-
-
-            }
-
+            });
         }
 
 
@@ -119,8 +138,11 @@
 </head>
 <body>
     <div class="talk_con">
+        <div class="talk_input">
+            <span >AIML应答机器人--小A</span>
+        </div>
         <div class="talk_show" id="words">
-            <div class="atalk"><span id="asay">小A：你好，有什么可以帮助您？</span></div>
+            <div class="atalk"><img style="width: 45px;" src="img/kf.png"></img><span id="asay">您好，很高兴为您服务，请问有什么可以帮助您？</span></div>
         </div>
         <div class="talk_input">
             <input type="text" class="talk_word" id="talkwords">

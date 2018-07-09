@@ -2,15 +2,27 @@
 <aiml>
     <category>
         <pattern>*你是猪*</pattern>
-        <template>你.才.是.猪! o(︶︿︶)o</template>
+        <template>
+            <srai>脏字</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_傻逼_</pattern>
+        <template>
+            <srai>脏字</srai>
+        </template>
     </category>
     <category>
         <pattern>*你是SB*</pattern>
-        <template>你.才.是.SB! o(︶︿︶)o</template>
+        <template>
+            <srai>脏字</srai>
+        </template>
     </category>
     <category>
         <pattern>*操你妈*</pattern>
-        <template>你说脏话，我不理你了，哼！</template>
+        <template>
+            <srai>脏字</srai>
+        </template>
     </category>
     <category>
         <pattern>*草尼玛*</pattern>
@@ -18,15 +30,21 @@
     </category>
     <category>
         <pattern>草</pattern>
-        <template>草木皆兵，哈哈</template>
+        <template>
+            <srai>脏字</srai>
+        </template>
     </category>
     <category>
         <pattern>*卧槽*</pattern>
-        <template>谈吐中，我发现你是90后。</template>
+        <template>
+            <srai>脏字</srai>
+        </template>
     </category>
     <category>
         <pattern>干</pattern>
-        <template>什么的干活！</template>
+        <template>
+            <srai>脏字</srai>
+        </template>
     </category>
     <category>
         <pattern>*你是白痴*</pattern>
@@ -34,12 +52,14 @@
     </category>
     <category>
         <pattern>*你是笨蛋*</pattern>
-        <template>你才是笨蛋呢！哼，你全家都是笨蛋~</template>
+        <template>哼，你才是笨蛋呢！</template>
     </category>
 
     <category>
         <pattern>*爆你菊花*</pattern>
-        <template>你木有小JJ!</template>
+        <template>
+            <srai>脏字</srai>
+        </template>
     </category>
     <category>
         <pattern>*菊花*</pattern>
@@ -47,7 +67,9 @@
     </category>
     <category>
         <pattern>我插</pattern>
-        <template>为什么这么惊讶！被我的聪明才智吓都了吗？</template>
+        <template>
+            <srai>脏字</srai>
+        </template>
     </category>
     <category>
         <pattern>*滚*</pattern>
@@ -55,7 +77,9 @@
     </category>
     <category>
         <pattern>*去死*</pattern>
-        <template>下次你应该说“停电”，因为我是机器人，嘿嘿，没电就不能工作！</template>
+        <template>
+            <srai>脏字</srai>
+        </template>
     </category>
     <category>
         <pattern>停电*</pattern>
@@ -68,7 +92,7 @@
     <category>
         <pattern>*你个2货*</pattern>
         <template>
-            <srai>你好2</srai>
+            <srai>脏字</srai>
         </template>
     </category>
     <category>
@@ -79,40 +103,50 @@
     </category>
     <category>
         <pattern>神经病</pattern>
-        <template>神经病？严重吗，要不要叫医生！</template>
+        <template>
+            <srai>脏字</srai>
+        </template>
     </category>
     <category>
-        <pattern>你妹</pattern>
-        <template>你妹夫的。哼！</template>
+        <pattern>_你妹_</pattern>
+        <template>
+            <srai>脏字</srai>
+        </template>
     </category>
     <category>
         <pattern>他娘的*</pattern>
-        <template>他娘怎么了？</template>
+        <template>
+            <srai>脏字</srai>
+        </template>
     </category>
     <category>
         <pattern>我了个去*</pattern>
-        <template>去哪里？</template>
+        <template>
+            <srai>脏字</srai>
+        </template>
     </category>
     <category>
         <pattern>我去</pattern>
         <template>
-            <srai>我了个去*</srai>
+            <srai>脏字</srai>
         </template>
     </category>
     <category>
         <pattern>我嘞个去*</pattern>
         <template>
-            <srai>我了个去</srai>
+            <srai>脏字</srai>
         </template>
     </category>
 
     <category>
         <pattern>*你好坑*</pattern>
-        <template>坑的就是你好吗！</template>
+        <template>hhh，被你发现了！</template>
     </category>
     <category>
-        <pattern>日</pattern>
-        <template>太阳！</template>
+        <pattern>_我日_</pattern>
+        <template>
+            <srai>脏字</srai>
+        </template>
     </category>
     <category>
         <pattern>*放屁*</pattern>
@@ -131,76 +165,60 @@
     <category>
         <pattern>笨蛋</pattern>
         <template>
-            <random>
-                <li>我不是笨蛋。</li>
-                <li>你才是笨蛋！</li>
-                <li>笨蛋是什么东西？有鸡蛋好吃吗？</li>
-            </random>
+            笨蛋是什么东西？有鸡蛋好吃吗？
         </template>
     </category>
     <category>
         <pattern>我靠*</pattern>
-        <template>不要靠好吗？</template>
-    </category>
-
-    <category>
-        <pattern>NND</pattern>
         <template>
-            <srai>妈的</srai>
+            <srai>脏字</srai>
         </template>
     </category>
 
+
     <category>
         <pattern>NND</pattern>
         <template>
-            <srai>妈的</srai>
+            <srai>脏字</srai>
         </template>
     </category>
     <category>
         <pattern>操你</pattern>
         <template>
-            <srai>妈的</srai>
+            <srai>脏字</srai>
         </template>
     </category>
     <category>
         <pattern>操你*</pattern>
         <template>
-            <srai>妈的</srai>
+            <srai>脏字</srai>
         </template>
     </category>
     <category>
         <pattern>他妈的</pattern>
         <template>
-            <srai>妈的</srai>
+            <srai>脏字</srai>
         </template>
     </category>
     <category>
         <pattern>NND</pattern>
         <template>
-            <srai>妈的</srai>
-        </template>
-    </category>
-    <category>
-        <pattern>娘*</pattern>
-        <template>
-            <srai>妈的</srai>
+            <srai>脏字</srai>
         </template>
     </category>
 
     <category>
         <pattern>妈的</pattern>
         <template>
-            <random>
-                <li>你疯啦？</li>
-                <li>我惹你了吗?</li>
-                <li>为什么骂人?</li>
-                <li>我让你生气了?</li>
-                <li>你以为我不懂?NND!</li>
-                <li>你妈的</li>
-                <li>再见</li>
-                <li>你是一个没教养的人</li>
-                <li>亏你说得出口</li>
-            </random>
+            <srai>脏字</srai>
         </template>
     </category>
+
+    <category>
+        <pattern>脏字</pattern>
+        <template>
+                您的提问含有某些本系统禁止用词，请您重新输入您的问题!
+        </template>
+    </category>
+
 </aiml>

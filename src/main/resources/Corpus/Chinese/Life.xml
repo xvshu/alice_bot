@@ -11,5 +11,9 @@
         <template>url:http://wap.baidu.com/s?word=<star index="1" />天气</template>
     </category>
 
+    <category>
+        <pattern>_百度下_</pattern>
+        <template>url:http://wap.baidu.com/s?word=<star index="2" /></template>
+    </category>
 
 </aiml>

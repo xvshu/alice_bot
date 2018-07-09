@@ -27,7 +27,12 @@ public class ChartContext implements IAskApproach {
         "唔，主人还没有教会我这个问题呢。",
         "我暂时还回答不了这个问题呢？",
         "我好像不明白。",
+
 	};
+
+	private final String DMSDMSG ="您可以联系大米时代的其他小哥哥小姐姐，座机：010-51292788 或者 0316-5552070， 手机（微信）：1583163905，\n" +
+			"  邮箱：3460307818@qq.com，\n" +
+			"  您也可以直接来看看小A，地址：廊坊市广阳区文明路与永丰道交叉口志晟创客中心四楼，我们期待您的来访！\n";
 
 	public ChartContext(AskToAIML askToAIML, AskToDB askToDB) {
 		this.askToAIML = askToAIML;
@@ -93,7 +98,7 @@ public class ChartContext implements IAskApproach {
      * @return
      */
 	private String getRandomResponse() {
-		return NULLREPLAY[getRandomNum()];
+		return NULLREPLAY[getRandomNum()]+DMSDMSG;
 	}
 
 	private int getRandomNum() {
