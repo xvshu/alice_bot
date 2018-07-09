@@ -32,9 +32,23 @@
         <template>
             <think>
                 <system>
-                    String learn(String question,String answer)
+                    import bitoflife.chatterbean.AliceBot;
+                    import bitoflife.chatterbean.Context;
+                    import bitoflife.chatterbean.Graphmaster;
+                    import bitoflife.chatterbean.aiml.Category;
+                    import bitoflife.chatterbean.text.Transformations;
+
+                    void learn(String pattern, String template)
                     {
-                    return question+":"+answer;
+                    /* The "match" variable represents the current matching context. */
+                    AliceBot bot = match.getCallback();
+                    Context context = bot.getContext();
+                    Transformations transformations = context.getTransformations();
+
+                    pattern = transformations.normalization(pattern);
+                    Category category = new Category(pattern, new String[] {template});
+                    Graphmaster brain = bot.getGraphmaster();
+                    brain.append(category);
                     }
                 </system>
             </think>
