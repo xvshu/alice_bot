@@ -11,10 +11,17 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 
 import com.customexception.AppException;
+import com.util.FilePath;
 
 public class GossipLoad {
-	private String gossipPath = "D:\\gitproject\\test\\智能应答机器人\\AliceBot\\src\\main\\resources\\gossip.txt";// 数据源文件
-	private String destination = "D:\\gitproject\\test\\智能应答机器人\\AliceBot\\src\\main\\resources\\Corpus\\Chinese\\gossip.xml";// 目标文件
+//	private String gossipPath = "D:\\gitproject\\git.xvshu\\alice_bot\\src\\main\\resources\\gossip.txt";// 数据源文件
+
+	private String gossipPath = new FilePath().getFilePath("/gossip.txt");
+
+//	private String destination = "D:\\gitproject\\git.xvshu\\alice_bot\\src\\main\\resources\\Corpus\\Chinese\\gossip.xml";// 目标文件
+
+	private String destination = new FilePath().getFilePath("/Corpus/Chinese/gossip.xml");
+
 	private InputStream inputStream = null;
 	private BufferedReader bufReader = null;
 	private OutputStream outputStream = null;
@@ -51,6 +58,10 @@ public class GossipLoad {
 	}
 
 	private void init() throws AppException {
+
+		System.out.println(gossipPath);
+		System.out.println(destination);
+
 		if (bufReader == null) {
 			File gossipFile = new File(gossipPath);
 			try {

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<category> 
-<pattern>*天气*</pattern>
-<template>url:http://wap.baidu.com/s?word=<star/>天气
-</template> 
-</category>
+    <category>
+        <pattern>今天天气挺好*</pattern>
+        <template>是吗？我这里下雨了。要是没下雨，我就出去玩了！
+        </template>
+    </category>
+
+    <category>
+        <pattern>_天气_</pattern>
+        <template>url:http://wap.baidu.com/s?word=<star index="1" />天气</template>
+    </category>
 
 
 </aiml>

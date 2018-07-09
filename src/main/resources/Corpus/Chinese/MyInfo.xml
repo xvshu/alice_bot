@@ -3,7 +3,8 @@
     <category>
         <pattern>什么是*</pattern>
         <template>
-            #<star index="1"/>
+            #
+            <star index="1"/>
         </template>
     </category>
 </aiml>
